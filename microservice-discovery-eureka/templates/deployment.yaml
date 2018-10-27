@@ -40,7 +40,6 @@ spec:
       imagePullSecrets:
         - name: qcloudregistrykey
         - name: tencenthubkey
-{{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
       nodeSelector:
 {{ toYaml . | indent 8 }}
