@@ -37,6 +37,10 @@ spec:
               port: http
           resources:
 {{ toYaml .Values.resources | indent 12 }}
+      imagePullSecrets:
+        - name: qcloudregistrykey
+        - name: tencenthubkey
+{{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
       nodeSelector:
 {{ toYaml . | indent 8 }}
@@ -49,7 +53,3 @@ spec:
       tolerations:
 {{ toYaml . | indent 8 }}
     {{- end }}
-{{ toYaml .Values.resources | indent 12 }}
-      imagePullSecrets:
-        - name: qcloudregistrykey
-        - name: tencenthubkey
