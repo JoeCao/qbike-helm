@@ -49,3 +49,7 @@ spec:
       tolerations:
 {{ toYaml . | indent 8 }}
     {{- end }}
+{{ toYaml .Values.resources | indent 12 }}
+      imagePullSecrets:
+        - name: qcloudregistrykey
+        - name: tencenthubkey
