@@ -14,11 +14,11 @@ fullnameOverride: ""
 
 env:
   EUREKA_HOST: microservice-discovery-eureka
-  RABBIT: caozupeng-rabbitmq
+  RABBIT: caozupeng-rabbitmq-headless
 
 service:
   type: ClusterIP
-  port: 5672
+  port: 8050
 
 ingress:
   enabled: false
