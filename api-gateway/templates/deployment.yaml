@@ -25,7 +25,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: 80
+              containerPort: 5672
               protocol: TCP
           livenessProbe:
             httpGet:
@@ -37,11 +37,11 @@ spec:
               port: http
           resources:
 {{ toYaml .Values.resources | indent 12 }}
-    imagePullSecrets:
-      - name: qcloudregistrykey
-      - name: tencenthubkey
-  {{- with .Values.nodeSelector }}
-    nodeSelector:
+      imagePullSecrets:
+        - name: qcloudregistrykey
+        - name: tencenthubkey
+    {{- with .Values.nodeSelector }}
+      nodeSelector:
 {{ toYaml . | indent 8 }}
     {{- end }}
     {{- with .Values.affinity }}
