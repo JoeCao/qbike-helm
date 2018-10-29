@@ -17,7 +17,7 @@ env:
   RABBIT: caozupeng-rabbitmq-headless
 
 service:
-  type: ClusterIP
+  type: LoadBalancer
   port: 8050
 
 ingress:
