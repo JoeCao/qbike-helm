@@ -19,6 +19,8 @@ env:
   DB_SCHEMA: qbike
   EUREKA_HOST: caozupeng-microservice-discovery-eureka
   RABBIT: caozupeng-rabbitmq
+  DB_USERNAME: root
+  DB_PASSWORD: root13hloo
 
 service:
   type: ClusterIP
