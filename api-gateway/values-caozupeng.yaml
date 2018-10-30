@@ -13,7 +13,7 @@ nameOverride: ""
 fullnameOverride: ""
 
 env:
-  RABBIT: caozupeng-rabbitmq-headless
+  RABBIT: caozupeng-rabbitmq-0
   EUREKA_HOST: microservice-discovery-eureka
 
 
