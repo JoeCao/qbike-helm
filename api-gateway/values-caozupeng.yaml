@@ -14,7 +14,7 @@ fullnameOverride: ""
 
 env:
   RABBIT: caozupeng-rabbitmq
-  EUREKA_HOST: microservice-discovery-eureka
+  EUREKA_HOST: caozupeng-microservice-discovery-eureka
 
 
 service:

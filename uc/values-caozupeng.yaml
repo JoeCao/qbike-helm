@@ -17,7 +17,7 @@ env:
   REDIS_DB: 0
   DB_HOST: caozupeng-mysql
   DB_SCHEMA: qbike
-  EUREKA_HOST: microservice-discovery-eureka
+  EUREKA_HOST: caozupeng-microservice-discovery-eureka
   RABBIT: caozupeng-rabbitmq
 
 service:
