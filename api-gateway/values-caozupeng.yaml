@@ -13,8 +13,9 @@ nameOverride: ""
 fullnameOverride: ""
 
 env:
-  EUREKA_HOST: microservice-discovery-eureka
   RABBIT: caozupeng-rabbitmq-headless
+  EUREKA_HOST: microservice-discovery-eureka
+
 
 service:
   type: LoadBalancer
