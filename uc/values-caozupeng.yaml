@@ -1,11 +1,11 @@
-# Default values for api-gateway.
+# Default values for uc.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: ccr.ccs.tencentyun.com/caozupeng/api-gateway
+  repository: ccr.ccs.tencentyun.com/caozupeng/uc
   tag: 0.0.1
   pullPolicy: IfNotPresent
 
@@ -13,16 +13,20 @@ nameOverride: ""
 fullnameOverride: ""
 
 env:
-  RABBIT: caozupeng-rabbitmq
+  REDIS_HOST: caozupeng-redis-master
+  REDIS_DB: 0
+  DB_HOST: caozupeng-mysql
+  DB_SCHEMA: qbike
   EUREKA_HOST: microservice-discovery-eureka
-
+  RABBIT: caozupeng-rabbitmq
 
 service:
-  type: LoadBalancer
-  port: 8050
+  type: ClusterIP
+  port: 8000
 
 ingress:
   enabled: false
+
 
 
 resources: {}
